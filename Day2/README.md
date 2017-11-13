@@ -11,6 +11,7 @@ myBlock{
   transform: translate(-50%, -50%);
   width:20px;
   height:20px;
+  position：absolute；/*zhe ge bi xu you*/
 }
 ```
 - rotate : `rotate(angle)`. 以中心点进行旋转。
