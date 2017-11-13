@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<head>
+  <link rel="styleSheet" href="day2.css">
+</head>
+<body>
+  <div class="frame">
+    <div class="center">
+      <div class="menu-icon">
+  			<div class="line-1 no-animation"></div>
+  			<div class="line-2 no-animation"></div>
+  			<div class="line-3 no-animation"></div>
+  		</div>
+    </div>
+  </div>
+  <script>
+    var menu = document.querySelector('.menu-icon');
+    menu.addEventListener('click', function(e){
+      var arr = this.children;
+      for(var i=0; i<arr.length;i++){
+        if(arr[i].classList.contains('no-animation')){
+          arr[i].classList.remove('no-animation');
+        }
+      }
+      this.classList.toggle('active');
+
+    });
+  </script>
+</body>
+</html>
