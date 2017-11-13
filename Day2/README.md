@@ -31,3 +31,21 @@ myBlock{
 4. 一条规则，只能定义一个属性的变化，不能涉及多个属性。[阮一峰CSS简介](http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html)
 
 **所以，才出现了Animation，来解决这个问题。**
+
+## Animation
+`animation` 要有一个动画效果的名字，这个是名字的内容是由`@keyframes`决定的。这个可以弥补transition不能有中间状态的缺陷. It also need a duration time, and iteration count.
+```css
+.element{
+  animation : line-1-nor 1s infinite;
+ }
+ @keyframes line-1-nor{
+  0%{ background:red;}
+  50%{background:green;}
+  100%{background:blue;}
+ }
+ ```
+ other properties :
+ - animation-fill-mode: forwards表示让动画停留在结束状态
+ - animation-direction: sets the direction of the animation after the cycle. normal, alternate, reverse
+ - animation-play-state:  pause/running
+ 
