@@ -50,3 +50,7 @@ myBlock{
  - animation-direction: sets the direction of the animation after the cycle. normal, alternate, reverse
  - animation-play-state:  pause/running
  
+## Event Delegation
+In the delegation, we can check the children with the tagNames, or the children's classNames. `var result = element.matches('.endangered'); `
+
+`Array.prototype.includes()/String.prototype.includes()`. These can't be used to check if the element includes any.
