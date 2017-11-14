@@ -16,8 +16,8 @@
   <script>
     var menu = document.querySelector('.menu-icon');
     menu.addEventListener('click', function(e){
-      var arr = this.children;
-      for(var i=0; i<arr.length;i++){
+      var arr = this.children; //nodelist arr
+      for(var i=0; i<arr.length;i++){//loop through the children because of the delegation.
         if(arr[i].classList.contains('no-animation')){
           arr[i].classList.remove('no-animation');
         }
