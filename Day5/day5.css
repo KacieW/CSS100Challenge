@@ -1,0 +1,201 @@
+.frame{
+  width:400px;
+  height:400px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  background: #59C9A5;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+.card{
+  width:280px;
+  height:220px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: #F4F3EE;
+  box-shadow: 2px 1px 16px 4px rgba(89,89,89,0.6);
+}
+.header{
+  background-color: #E6AF2E;
+  width:100%;
+  height:60px;
+  position: relative;
+    color:#fff;
+}
+.title{
+  top:18px;
+  left:20px;
+  position: absolute;
+  text-transform: uppercase;
+}
+.date{
+  top:38px;
+  left:20px;
+  position: absolute;
+}
+.type{
+  top:18px;
+  right:20px;
+  position: absolute;
+}
+.value{
+  top:38px;
+  right:20px;
+  position: absolute;
+}
+.small{
+  font-size: 11px;
+}
+.big{
+  font-size: 14px;
+  font-weight: 600;
+}
+.parameter{
+  display: flex;
+  justify-content: flex-end;
+  padding:10px 0 14px 0;
+  position: relative;
+  font-size: 12px;
+}
+span.red{
+  position: relative;
+  padding: 0 10px 0 25px;
+}
+span.blue{
+  position: relative;
+  padding: 0 10px 0 25px;
+}
+span.red:before{
+  content:"";
+  position: absolute;
+  width:10px;
+  height:3px;
+  top:5px;
+  left:10px;
+  background-color: #C52233;
+}
+span.blue:before{
+  content:"";
+  position: absolute;
+  width:10px;
+  height: 3px;
+  top:5px;
+  left:10px;
+  background-color: #2667ff;
+}
+
+.statistic{
+  position: relative;
+  width:90%;
+  height:81px;
+  margin: 0 auto;
+}
+.line-1, .line-2, .line-3{
+  height:1px;
+  background-color: #a2a2a6;
+  position: absolute;
+  width: 100%;
+}
+.line-2{
+  top:40px;
+}
+.line-3{
+  top:inherit;
+  bottom: 0px;
+}
+.data svg{
+  width:100%;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  position: absolute;
+}
+polyline{
+  fill:none;
+  stroke-width:2;
+  stroke-linecap:round;
+}
+.data.red polyline{
+  stroke:#C52233;
+}
+.data.blue polyline{
+  stroke:#2667ff;
+}
+
+.tooltip{
+  position: absolute;
+  left:50%;
+  transform: translate3d(-50%, 10px, 0);
+  padding: 8px 6px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-out 0s, transform 0.4s ease-out 0s;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+.tooltip:after{
+  position: absolute;
+  display: block;
+  content:'';
+  height: 6px;
+  width: 6px;
+  left:50%;
+  /*transform:rotate(45deg);*/
+  background-color: #fa7373;
+}
+[class ^="point-"]{
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  z-index: 10;
+}
+[class^="point-"]:hover .tooltip{
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0);
+  background-color: #fa7373;
+}
+.data.red .point-1{
+  left:7px;
+  top:43px;
+}
+.data.red .point-2{
+  left:48px;
+  top:9px;
+}
+.data.red .point-3{
+  left:88px;
+  top:20px;
+}
+.data.red .point-4{
+  left:128px;
+  top:8px;
+}
+.data.red .point-5{
+  left:169px;
+  top:35px;
+}
+.data.red .point-6{
+  left:209px;
+  top:45px;
+}
+.data.red .point-7{
+  left:249px;
+  top:16px;
+}
+.days{
+ width: 280px;
+ margin: 10px auto;
+ display: flex;
+ justify-content: space-around;
+}
+.day{
+  display: block;
+  font-size: 9px;
+  text-align: center;
+  text-transform: uppercase;
+}
