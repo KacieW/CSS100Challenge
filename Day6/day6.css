@@ -1,0 +1,116 @@
+.frame {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  background-color: #FFA686;
+  position: absolute;
+  background: -webkit-linear-gradient(45deg, #ffb59a, #FFA686);
+  background: -o-linear-gradient(45deg, #ffb59a, #FFA686);
+  background: linear-gradient(45deg, #ffb59a, #FFA686); }
+  .frame .center {
+    width: 320px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: #ffdfd4;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.profile {
+  width: 60%;
+  float: left;
+  text-align: center; }
+  .profile .image {
+    height: 70px;
+    width: 80px;
+    margin: 38px auto;
+    position: relative; }
+    .profile .image .circle-1, .profile .image .circle-2 {
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 50%;
+      width: 78px;
+      height: 80px;
+      position: absolute;
+      top: -6px;
+      left: -4px;
+      border-color: #FFA686 #FFA686 #FFA686 transparent;
+      -webkit-transition: all 2s ease-in-out;
+      -o-transition: all 2s ease-in-out;
+      transition: all 2s ease-in-out; }
+    .profile .image .circle-2 {
+      border-color: #FFA686 transparent #FFA686 #FFA686;
+      width: 86px;
+      height: 88px;
+      top: -10px;
+      left: -8px; }
+    .profile .image img {
+      border-radius: 50%;
+      display: block; }
+    .profile .image:hover .circle-1, .profile .image:hover .circle-2 {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg); }
+    .profile .image:hover .circle-2 {
+      -webkit-transform: rotate(-360deg);
+      -ms-transform: rotate(-360deg);
+      transform: rotate(-360deg); }
+  .profile .name {
+    font-size: 20px;
+    font-weight: bold; }
+  .profile .job {
+    font-size: 12px; }
+  .profile .actions {
+    padding: 20px; }
+    .profile .actions .btn {
+      border: 1px solid #FFA686;
+      border-radius: 10px;
+      display: block;
+      margin: 4px auto;
+      font-size: 14px;
+      height: 24px;
+      width: 70%;
+      background-color: transparent; }
+      .profile .actions .btn:hover {
+        background-color: #FFA686; }
+
+.stats {
+  float: left;
+  width: 40%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center; }
+  .stats .box {
+    height: 100px;
+    padding-top: 26px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #ffc2ab; }
+    .stats .box:nth-child(2) {
+      margin: 1px 0; }
+    .stats .box:hover {
+      background-color: #ff7f4f; }
+    .stats .box .value, .stats .box .parameter {
+      display: block;
+      font-size: 16px;
+      font-weight: bold; }
+    .stats .box .parameter {
+      font-weight: lighter; }
