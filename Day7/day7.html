@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/day7.css">
+</head>
+<body>
+<div class="frame">
+  <div class="panel">
+    <div class="header">
+			<div class="menu-icon">
+				<div class="dash-top"></div>
+				<div class="dash-bottom"></div>
+				<div class="circle"></div>
+			</div>
+			<span class="title">Notifications</span>
+			<input type="text" class="search-input" placeholder="Search ...">
+			<div class="fa fa-search search-icon">f</div>
+		</div>
+
+		<div class="notifications clearfix">
+			<div class="line"></div>
+			<div class="notification">
+				<div class="circle"></div>
+				<span class="time">9:24 AM</span>
+				<p><b>John Walker</b> posted a photo on your wall.</p>
+			</div>
+			<div class="notification">
+				<div class="circle"></div>
+				<span class="time">8:19 AM</span>
+				<p><b>Alice Parker</b> commented your last post.</p>
+			</div>
+			<div class="notification">
+				<div class="circle"></div>
+				<span class="time">Yesterday</span>
+				<p><b>Luke Wayne</b> added you as friend.</p>
+			</div>
+		</div>
+  </div>
+
+	<div class="menu">
+		<ul>
+			<li>Dashboard</li>
+			<li>Profile</li>
+			<li></span>Notifications</li>
+			<li>Messages</li>
+			<li>Settings</li>
+		</ul>
+	</div>
+
+</div>
+<script>
+
+  var searchIcon = document.querySelector('.search-icon');
+  var menuIcon= document.querySelector('.menu-icon');
+  function showSearchBox(e){
+    document.querySelector('.search-input').classList.toggle('active');
+  }
+  function showMenu(e){
+      console.log('menu');
+      document.querySelector('.panel').classList.toggle('show-menu');
+      document.querySelector('.menu').classList.toggle('active');
+  }
+  searchIcon.addEventListener('click', showSearchBox);
+  menuIcon.addEventListener('click', showMenu);
+</script>
+</body>
+</html>
